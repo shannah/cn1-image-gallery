@@ -1,0 +1,50 @@
+= Codename One Image Gallery Plugin
+
+This plugin adds support for the new Android https://developer.android.com/training/data-storage/shared/photopicker#java[Photo Picker API].
+It integrates directly into the `Display.openGallery()` method, so that, if this plugin is enabled, it will automatically use the new native PhotoPicker API to allow the user to select images and videos.
+
+== Installation
+
+=== Maven projects
+
+Add the following dependency to your common/pom.xml file:
+
+[source,xml]
+----
+<dependency>
+    <groupId>com.codenameone</groupId>
+    <artifactId>image-gallery-lib</artifactId>
+    <version>1.0</version>
+    <type>pom</type>
+</dependency>
+----
+
+=== Ant Projects
+
+Install the Image Gallery Plugin via Codename One Preferences
+
+=== Project Requirements
+
+This plugin requires the following build hints to be set:
+
+```
+android.useAndroidX=true
+android.extendAppCompatActivity=true
+```
+
+== Usage
+
+Register the plugin inside the `init()` method of your app.
+
+[source,java]
+----
+public void init(Object context) {
+    super.init(context);
+    if (ImageGallery.isSupported()) {
+        ImageGallery.register();
+    }
+}
+----
+
+Then, use the `Display.openGallery()` method to open the gallery.
+
