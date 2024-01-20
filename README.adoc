@@ -48,3 +48,6 @@ public void init(Object context) {
 
 Then, use the `Display.openGallery()` method to open the gallery.
 
+== Demo Project
+
+https://github.com/shannah/cn1-image-gallery-demo
