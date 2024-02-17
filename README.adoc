@@ -30,6 +30,7 @@ This plugin requires the following build hints to be set:
 ```
 android.useAndroidX=true
 android.extendAppCompatActivity=true
+android.useGradle8=true
 ```
 
 == Usage
